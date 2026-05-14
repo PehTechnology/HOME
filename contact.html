@@ -112,26 +112,82 @@
         text-align:center;
     }
 }
+
+.menu-toggle{
+    display:none;
+    font-size:30px;
+    cursor:pointer;
+    color: var(--primary);
+}
+
+@media (max-width:768px){
+
+    nav{
+        padding:15px 20px;
+        position:relative;
+    }
+
+    .menu-toggle{
+        display:block;
+    }
+
+    .nav-links{
+        display:none;
+        flex-direction:column;
+        position:absolute;
+        top:80px;
+        right:20px;
+        background:white;
+        width:220px;
+        padding:20px;
+        border-radius:15px;
+        box-shadow:0 10px 30px rgba(0,0,0,0.15);
+        gap:15px;
+    }
+
+    .nav-links.active{
+        display:flex;
+    }
+
+    .nav-links li{
+        list-style:none;
+    }
+
+    .nav-links a{
+        text-decoration:none;
+        color:#000;
+        font-size:18px;
+    }
+
+}
         </style>
 </head>
 <body>
 
-    <nav>
-        <a href="#" class="logo">PEH <span>TECHNOLOGY</span></a>
-        <ul class="nav-links">
-            <li><a href="index.html">หน้าแรก</a></li>
-            <li><a href="about.html">เกี่ยวกับเรา</a></li>
-            <li><a href="products.html">ผลิตภัณฑ์</a></li>
-            <li><a href="services.html">บริการ</a></li>
-            <li><a href="gallery.html">ผลงาน</a></li>
-            <li><a href="contact.html">ติดต่อเรา</a></li>
-        </ul>
-        <img 
-        src="2.jpg" 
-        alt="PEH Logo" 
-        style="width:50px; height:50px; object-fit:contain;"
-        />
-    </nav>
+   <nav>
+
+    <a href="#" class="logo">PEH <span>TECHNOLOGY</span></a>
+
+    <div class="menu-toggle" id="menu-toggle">
+        ☰
+    </div>
+
+    <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">หน้าแรก</a></li>
+        <li><a href="about.html">เกี่ยวกับเรา</a></li>
+        <li><a href="products.html">ผลิตภัณฑ์</a></li>
+        <li><a href="services.html">บริการ</a></li>
+        <li><a href="gallery.html">ผลงาน</a></li>
+        <li><a href="contact.html">ติดต่อเรา</a></li>
+    </ul>
+
+    <img 
+    src="2.jpg" 
+    alt="PEH Logo" 
+    style="width:50px; height:50px; object-fit:contain;"
+    />
+
+</nav>
 
     
     <!-- SECTION CONTACT -->
@@ -291,5 +347,17 @@
     </div>
 
 </section>
+  <script>
+
+const menuToggle = document.getElementById("menu-toggle");
+const navLinks = document.getElementById("nav-links");
+
+menuToggle.onclick = function(){
+
+    navLinks.classList.toggle("active");
+
+}
+
+</script>
 </body>
 </html>
