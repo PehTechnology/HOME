@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap');
+        
+        :root {
+            --main-navy: #0a2342;
+            --accent: #00A8E8; 
+            --tech-blue: #1b4d89;
+            --eco-green: #2ecc71;
+            --accent-gray: #f4f4f4;
+            --white: #ffffff;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Kanit', sans-serif; }
+        html { scroll-behavior: smooth; }
+        body { background-color: #fff; color: var(--dark); line-height: 1.6; }
+         nav {
+            background: white;
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .logo { font-size: 1.8rem; font-weight: 700; color: var(--primary); letter-spacing: 1px; text-decoration: none; }
+        .logo span { color: var(--accent); }
+
+        .nav-links { display: flex; list-style: none; gap: 25px; }
+        .nav-links a { text-decoration: none; color: var(--dark); font-weight: 400; transition: 0.3s; }
+        .nav-links a:hover { color: var(--accent); }
+
+        *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Tahoma,sans-serif;
+}
+
+body{
+    background:#f4f7fb;
+    color:#222;
+}
+
+header{
+    background:#003b95;
+    color:white;
+    padding:20px;
+    text-align:center;
+}
+
+header h1{
+    font-size:42px;
+}
+
+header p{
+    margin-top:10px;
+    font-size:18px;
+}
+
+.products{
+    width:95%;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+    padding:40px 0;
+}
+
+.card{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,0.15);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:20px;
+}
+
+.card-content h2{
+    color:#003b95;
+    margin-bottom:10px;
+    font-size:28px;
+}
+
+.card-content p{
+    line-height:1.8;
+    margin-bottom:15px;
+}
+
+.btn{
+    display:inline-block;
+    padding:12px 20px;
+    background:#003b95;
+    color:white;
+    text-decoration:none;
+    border-radius:10px;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#001f4d;
+}
+
+footer{
+    background:#002d70;
+    color:white;
+    text-align:center;
+    padding:25px;
+    margin-top:40px;
+}
+        </style>
+</head>
+<body>
+    
+
+
+ <nav>
+        <a href="#" class="logo">PEH <span>TECHNOLOGY</span></a>
+        <ul class="nav-links">
+            <li><a href="index.html">หน้าแรก</a></li>
+            <li><a href="about.html">เกี่ยวกับเรา</a></li>
+            <li><a href="products.html">ผลิตภัณฑ์</a></li>
+            <li><a href="services.html">บริการ</a></li>
+            <li><a href="gallery.html">ผลงาน</a></li>
+            <li><a href="contact.html">ติดต่อเรา</a></li>
+        </ul>
+        <img 
+        src="1/2.jpg" 
+        alt="PEH Logo" 
+        style="width:50px; height:50px; object-fit:contain;"
+        />
+    </nav>
+
+    <header>
+    <h1>PEH TECHNOLOGY CO.LTD</h1>
+    <p>ผู้เชี่ยวชาญด้านวัสดุก่อสร้าง กันซึม สีรองพื้น และงานป้องกันการรั่วซึม</p>
+</header>
+
+<section class="products">
+
+    <!-- PRODUCT 1 -->
+    <div class="card">
+        <img src="1/15.png" alt="">
+        <div class="card-content">
+            <h2>สีรองพื้นอเนกประสงค์</h2>
+            <p>
+                สีรองพื้นคุณภาพสูง ช่วยเพิ่มการยึดเกาะของสีทับหน้า
+                ปกปิดพื้นผิวดี ใช้งานได้ทั้งภายในและภายนอก
+            </p>
+            <a href="#" class="btn">ดูรายละเอียด</a>
+        </div>
+    </div>
+
+    <!-- PRODUCT 2 -->
+    <div class="card">
+        <img src="1/11.png" alt="">
+        <div class="card-content">
+            <h2>ฟิล์มพื้นอเนกประสงค์</h2>
+            <p>
+                ฟิล์มตกแต่งพื้นและผนัง เพิ่มความสวยงาม
+                ทนทาน ทำความสะอาดง่าย เหมาะกับงานรีโนเวท
+            </p>
+            <a href="#" class="btn">ดูรายละเอียด</a>
+        </div>
+    </div>
+
+    <!-- PRODUCT 3 -->
+    <div class="card">
+        <img src="1/18.png" alt="">
+        <div class="card-content">
+            <h2>สารอุดรอยรั่วโพลียูรีเทน</h2>
+            <p>
+                สำหรับอุดรอยรั่ว กันซึม และป้องกันการรั่วซึม
+                ยืดหยุ่นสูง ทนต่อสภาพอากาศ
+            </p>
+            <a href="#" class="btn">ดูรายละเอียด</a>
+        </div>
+    </div>
+
+    <!-- PRODUCT 4 -->
+    <div class="card">
+        <img src="1/12.png" alt="">
+        <div class="card-content">
+            <h2>ตัวอย่างลายพื้นและผนัง</h2>
+            <p>
+                ตัวอย่างลวดลายและพื้นผิวสำหรับงานตกแต่ง
+                มีหลายสี หลายสไตล์ให้เลือก
+            </p>
+            <a href="#" class="btn">ดูรายละเอียด</a>
+        </div>
+    </div>
+
+</section>
+
+<footer>
+    <h3>PEH TECHNOLOGY CO.LTD</h3>
+    <p>โทร : 096-980-4128</p>
+</footer>
+
+</body>
+</html>

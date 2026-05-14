@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap');
+        
+        :root {
+            --main-navy: #0a2342;
+            --accent: #00A8E8; 
+            --tech-blue: #1b4d89;
+            --eco-green: #2ecc71;
+            --accent-gray: #f4f4f4;
+            --white: #ffffff;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Kanit', sans-serif; }
+        html { scroll-behavior: smooth; }
+        body { background-color: #fff; color: var(--dark); line-height: 1.6; }
+         nav {
+            background: white;
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .logo { font-size: 1.8rem; font-weight: 700; color: var(--primary); letter-spacing: 1px; text-decoration: none; }
+        .logo span { color: var(--accent); }
+
+        .nav-links { display: flex; list-style: none; gap: 25px; }
+        .nav-links a { text-decoration: none; color: var(--dark); font-weight: 400; transition: 0.3s; }
+        .nav-links a:hover { color: var(--accent); }
+
+      /* =========================
+   PORTFOLIO SECTION
+========================= */
+
+.portfolio-section{
+    width:100%;
+    padding:80px 7%;
+    background:#f5f8fc;
+}
+
+.portfolio-title{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.portfolio-title h2{
+    font-size:42px;
+    color:#0047b3;
+    margin-bottom:15px;
+    font-weight:bold;
+}
+
+.portfolio-title p{
+    max-width:850px;
+    margin:auto;
+    color:#666;
+    font-size:18px;
+    line-height:1.8;
+}
+
+.portfolio-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:30px;
+}
+
+.portfolio-card{
+    background:#fff;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.portfolio-card:hover{
+    transform:translateY(-10px);
+}
+
+.portfolio-card img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    cursor:pointer;
+    transition:0.4s;
+}
+
+.portfolio-card img:hover{
+    transform:scale(1.05);
+}
+
+.portfolio-content{
+    padding:25px;
+}
+
+.portfolio-content h3{
+    font-size:24px;
+    color:#0047b3;
+    margin-bottom:15px;
+}
+
+.portfolio-content p{
+    color:#555;
+    line-height:1.8;
+    font-size:16px;
+}
+
+/* =========================
+   IMAGE POPUP
+========================= */
+
+.modal{
+    display:none;
+    position:fixed;
+    z-index:9999;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.9);
+
+    justify-content:center;
+    align-items:center;
+}
+
+.modal-content{
+    max-width:90%;
+    max-height:90%;
+    border-radius:15px;
+}
+
+.close-btn{
+    position:absolute;
+    top:20px;
+    right:40px;
+    color:#fff;
+    font-size:50px;
+    cursor:pointer;
+}
+
+/* Responsive */
+@media(max-width:768px){
+
+    .portfolio-title h2{
+        font-size:32px;
+    }
+
+    .portfolio-title p{
+        font-size:16px;
+    }
+
+}
+
+
+        </style>
+
+</head>
+<body>
+    
+
+     <nav>
+        <a href="#" class="logo">PEH <span>TECHNOLOGY</span></a>
+        <ul class="nav-links">
+            <li><a href="index.html">หน้าแรก</a></li>
+            <li><a href="about.html">เกี่ยวกับเรา</a></li>
+            <li><a href="products.html">ผลิตภัณฑ์</a></li>
+            <li><a href="services.html">บริการ</a></li>
+            <li><a href="gallery.html">ผลงาน</a></li>
+            <li><a href="contact.html">ติดต่อเรา</a></li>
+        </ul>
+        <img 
+        src="1/2.jpg" 
+        alt="PEH Logo" 
+        style="width:50px; height:50px; object-fit:contain;"
+        />
+    </nav>
+
+
+    <section class="portfolio-section">
+
+    <div class="portfolio-title">
+        <h2>ผลงานโครงการของเรา</h2>
+        <p>
+            ตัวอย่างผลงานก่อนและหลังการก่อสร้าง งานกันซึม งานเคลือบพื้น 
+            และงานปรับปรุงอาคารโดยทีมงาน PEH TECHNOLOGY
+        </p>
+    </div>
+
+    <div class="portfolio-grid">
+
+        <!-- ผลงาน 1 -->
+        <div class="portfolio-card">
+            <img src="1/21.png" alt="งานกันซึมดาดฟ้า"
+                 onclick="openModal(this.src)">
+            <div class="portfolio-content">
+                <h3>งานกันซึมดาดฟ้า</h3>
+                <p>
+                    ปรับปรุงและเคลือบกันซึมดาดฟ้าอาคาร 
+                    ป้องกันการรั่วซึมและช่วยสะท้อนความร้อน
+                </p>
+            </div>
+        </div>
+
+        <!-- ผลงาน 2 -->
+        <div class="portfolio-card">
+            <img src="1/22.png" alt="งานพื้น Epoxy"
+                 onclick="openModal(this.src)">
+            <div class="portfolio-content">
+                <h3>งานพื้น Epoxy</h3>
+                <p>
+                    เคลือบพื้นอุตสาหกรรม Epoxy สำหรับโรงงาน 
+                    แข็งแรง ทนทาน และทำความสะอาดง่าย
+                </p>
+            </div>
+        </div>
+
+        <!-- ผลงาน 3 -->
+        <div class="portfolio-card">
+            <img src="1/23.png" alt="งานเคลือบหลังคา"
+                 onclick="openModal(this.src)">
+            <div class="portfolio-content">
+                <h3>งานเคลือบหลังคา</h3>
+                <p>
+                    เคลือบหลังคาเมทัลชีทและคอนกรีต 
+                    ลดความร้อนและยืดอายุการใช้งาน
+                </p>
+            </div>
+        </div>
+
+        <!-- ผลงาน 4 -->
+        <div class="portfolio-card">
+            <img src="1/24.png" alt="งานคอนโดและอาคาร"
+                 onclick="openModal(this.src)">
+            <div class="portfolio-content">
+                <h3>งานอาคารและคอนโด</h3>
+                <p>
+                    บริการซ่อมแซมระบบกันซึม 
+                    สำหรับอาคารสูงและโครงการที่พักอาศัย
+                </p>
+            </div>
+        </div>
+
+        <!-- ผลงาน 5 -->
+        <div class="portfolio-card">
+            <img src="1/30.png" alt="งานโครงสร้างพิเศษ"
+                 onclick="openModal(this.src)">
+            <div class="portfolio-content">
+                <h3>งานโครงสร้างพิเศษ</h3>
+                <p>
+                    งานป้องกันการรั่วซึมในอุโมงค์ 
+                    และโครงสร้างขนาดใหญ่
+                </p>
+            </div>
+        </div>
+
+        <!-- ผลงาน 6 -->
+        <div class="portfolio-card">
+            <img src="1/31.png" alt="งานถังเก็บน้ำ"
+                 onclick="openModal(this.src)">
+            <div class="portfolio-content">
+                <h3>งานถังเก็บน้ำ</h3>
+                <p>
+                    เคลือบป้องกันการรั่วซึมภายในถังเก็บน้ำ 
+                    เพิ่มความปลอดภัยและยืดอายุการใช้งาน
+                </p>
+            </div>
+        </div>
+
+          <div class="portfolio-card">
+            <img src="1/25.png" alt="งานโครงสร้างพิเศษ"
+                 onclick="openModal(this.src)">
+            <div class="portfolio-content">
+                  <h3>งานกันซึมดาดฟ้า</h3>
+    <p>
+        ป้องกันปัญหารั่วซึมบนดาดฟ้า 
+        และหลังคาอาคารทุกประเภท
+    </p>
+            </div>
+        </div>
+
+          <div class="portfolio-card">
+            <img src="1/26.png" alt="งานโครงสร้างพิเศษ"
+                 onclick="openModal(this.src)">
+            <div class="portfolio-content">
+                <h3>งานซ่อมรอยรั่ว</h3>
+                 <p>
+                 ซ่อมแซมรอยแตกร้าว 
+                    และปัญหาน้ำรั่วซึมทุกจุด
+                    </p>
+            </div>
+        </div>
+
+          <div class="portfolio-card">
+            <img src="1/27.png" alt="งานโครงสร้างพิเศษ"
+                 onclick="openModal(this.src)">
+            <div class="portfolio-content">
+                <h3>งานซ่อมรอยรั่ว</h3>
+    <p>
+        ซ่อมแซมรอยแตกร้าว 
+        และปัญหาน้ำรั่วซึมทุกจุด
+    </p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================
+     IMAGE POPUP
+========================= -->
+
+<div id="imageModal" class="modal">
+
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+
+    <img class="modal-content" id="popupImage">
+
+    
+
+</div>
+ <script>
+
+    function openModal(imageSrc){
+
+        document.getElementById("imageModal").style.display = "flex";
+
+        document.getElementById("popupImage").src = imageSrc;
+    }
+
+    function closeModal(){
+
+        document.getElementById("imageModal").style.display = "none";
+    }
+
+    window.onclick = function(event){
+
+        let modal = document.getElementById("imageModal");
+
+        if(event.target == modal){
+
+            modal.style.display = "none";
+        }
+    }
+
+
+    </script>
+<script src="script.js"></script>
+
+
+</body>
+</html>

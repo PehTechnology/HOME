@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เกี่ยวกับเรา | PEH Technology - พีอีเอช เทคโนโลยี</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap');
+        
+        :root {
+            --main-navy: #0a2342;
+            --accent: #00A8E8; 
+            --tech-blue: #1b4d89;
+            --eco-green: #2ecc71;
+            --accent-gray: #f4f4f4;
+            --white: #ffffff;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Kanit', sans-serif; }
+        html { scroll-behavior: smooth; }
+        body { background-color: #fff; color: var(--dark); line-height: 1.6; }
+         nav {
+            background: white;
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .logo { font-size: 1.8rem; font-weight: 700; color: var(--primary); letter-spacing: 1px; text-decoration: none; }
+        .logo span { color: var(--accent); }
+
+        .nav-links { display: flex; list-style: none; gap: 25px; }
+        .nav-links a { text-decoration: none; color: var(--dark); font-weight: 400; transition: 0.3s; }
+        .nav-links a:hover { color: var(--accent); }
+
+
+        body {
+            font-family: 'Kanit', sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #fff;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--main-navy) 0%, var(--tech-blue) 100%);
+            color: var(--white);
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            font-weight: 300;
+        }
+
+        .container {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        /* Intro Section */
+        .intro {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .intro h2 {
+            color: var(--main-navy);
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .intro-text {
+            font-size: 1.1rem;
+            color: #555;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--accent-gray);
+            padding: 40px;
+            border-radius: 15px;
+            border-bottom: 5px solid var(--tech-blue);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+
+        .card h3 {
+            color: var(--tech-blue);
+            font-size: 1.4rem;
+            margin-top: 0;
+        }
+
+        .card ul {
+            padding-left: 20px;
+            margin-bottom: 0;
+        }
+
+        .card li {
+            margin-bottom: 10px;
+            color: #444;
+        }
+
+        /* Green Tech Section */
+        .eco-badge {
+            background-color: var(--eco-green);
+            color: white;
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+
+        /* Project Targets */
+        .targets {
+            margin-top: 100px;
+            background: var(--main-navy);
+            color: white;
+            padding: 60px;
+            border-radius: 20px;
+            text-align: center;
+        }
+
+        .targets h2 {
+            margin-bottom: 40px;
+        }
+
+        .target-list {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .target-item {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 40px;
+            background: #eee;
+            margin-top: 80px;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 1.8rem; }
+            .targets { padding: 30px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#" class="logo">PEH <span>TECHNOLOGY</span></a>
+        <ul class="nav-links">
+            <li><a href="index.html">หน้าแรก</a></li>
+            <li><a href="about.html">เกี่ยวกับเรา</a></li>
+            <li><a href="products.html">ผลิตภัณฑ์</a></li>
+            <li><a href="services.html">บริการ</a></li>
+            <li><a href="gallery.html">ผลงาน</a></li>
+            <li><a href="contact.html">ติดต่อเรา</a></li>
+        </ul>
+        <img 
+        src="1/2.jpg" 
+        alt="PEH Logo" 
+        style="width:50px; height:50px; object-fit:contain;"
+        />
+    </nav>
+
+    <div class="hero">
+        <h1>บริษัท พีอีเอช เทคโนโลยี จำกัด</h1>
+        <p>PEH Technology - Professional Engineering & Building Solutions</p>
+    </div>
+
+    <div class="container">
+        <!-- เกี่ยวกับเรา -->
+        <div class="intro">
+            <h2>เกี่ยวกับเรา</h2>
+            <div class="intro-text">
+                <p>พีอีเอช เทคโนโลยี คือผู้เชี่ยวชาญด้านวัสดุก่อสร้างและระบบวิศวกรรมงานกันซึม ภายใต้ความร่วมมือเชิงกลยุทธ์กับ <strong>Shanghai Jiuxuan Chemical</strong> เรามุ่งมั่นนำนวัตกรรมวัสดุศาสตร์มาใช้ในการฟื้นฟูและซ่อมแซมอาคาร เพื่อสร้างแพลตฟอร์มเทคโนโลยีวิศวกรรมระดับมืออาชีพชั้นนำที่ได้รับมาตรฐาน ISO9001</p>
+            </div>
+        </div>
+
+        <!-- บริการหลัก -->
+        <div class="services-grid">
+            <!-- ระบบกันซึม -->
+            <div class="card">
+                <div class="eco-badge">นวัตกรรมสีเขียว</div>
+                <h3>ระบบกันซึมและงานซ่อมแซม</h3>
+                <ul>
+                    <li><strong>ระบบกันซึมโพลีเมอร์:</strong> ยืดหยุ่นสูง ทนทานต่อสภาพอากาศ</li>
+                    <li><strong>งานอุดรอยรั่ว:</strong> บริการอุดรอยรั่วหลังคา ผนังภายนอก และพื้นที่ใต้ดิน</li>
+                    <li><strong>ระบบกันซึมแรงดันย้อนกลับ:</strong> แก้ปัญหาความชื้นในชั้นใต้ดินและโรงจอดรถ</li>
+                </ul>
+            </div>
+
+            <!-- งานเคลือบผนัง -->
+            <div class="card">
+                <h3>งานเคลือบและตกแต่งผนัง</h3>
+                <ul>
+                    <li><strong>ระบบสะท้อนความร้อน:</strong> ช่วยประหยัดพลังงานสำหรับผนังภายนอก</li>
+                    <li><strong>สีสถาปัตยกรรม:</strong> สีหินจริง (Real Stone Paint) และสีศิลปะอนินทรีย์</li>
+                    <li><strong>ปลอดภัย:</strong> สารเคลือบสูตรน้ำ ปราศจากฟอร์มาลดีไฮด์</li>
+                </ul>
+            </div>
+
+            <!-- งานวิศวกรรมพิเศษ -->
+            <div class="card">
+                <h3>งานวิศวกรรมโครงสร้างพิเศษ</h3>
+                <ul>
+                    <li><strong>เกราะไฟเบอร์ (Fiber Armor):</strong> นวัตกรรมปกป้องพื้นผิวให้แข็งแรง</li>
+                    <li><strong>ป้องกันการกัดกร่อน:</strong> สำหรับโครงสร้างเหล็กมวลเบา</li>
+                    <li><strong>ปรับปรุงทัศนียภาพ:</strong> งาน Façade สำหรับวิลล่าและอาคารสาธารณะ</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- กลุ่มลูกค้า -->
+        <div class="targets">
+            <h2>ความเชี่ยวชาญในทุกประเภทอาคาร</h2>
+            <div class="target-list">
+                <div class="target-item">
+                    <h4>อาคารสาธารณะ</h4>
+                    <p>ห้างสรรพสินค้า, สำนักงาน, สถานศึกษา</p>
+                </div>
+                <div class="target-item">
+                    <h4>ที่อยู่อาศัย</h4>
+                    <p>วิลล่า, อพาร์ตเมนต์, โครงการบ้านสวยงาม</p>
+                </div>
+                <div class="target-item">
+                    <h4>โครงการฟื้นฟูเมือง</h4>
+                    <p>การปรับปรุงอาคารเก่าให้กลับมาสวยงามและคงทน</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p><strong>PEH Technology Co., Ltd.</strong></p>
+        <p>Partnered with Shanghai Jiuxuan Chemical Co., Ltd. (ISO9001 Certified)</p>
+        <p>&copy; 2026 Professional Building Solutions</p>
+    </div>
+
+</body>
+</html>

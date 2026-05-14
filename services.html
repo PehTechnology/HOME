@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap');
+        
+        :root {
+            --main-navy: #0a2342;
+            --accent: #00A8E8; 
+            --tech-blue: #1b4d89;
+            --eco-green: #2ecc71;
+            --accent-gray: #f4f4f4;
+            --white: #ffffff;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Kanit', sans-serif; }
+        html { scroll-behavior: smooth; }
+        body { background-color: #fff; color: var(--dark); line-height: 1.6; }
+         nav {
+            background: white;
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .logo { font-size: 1.8rem; font-weight: 700; color: var(--primary); letter-spacing: 1px; text-decoration: none; }
+        .logo span { color: var(--accent); }
+
+        .nav-links { display: flex; list-style: none; gap: 25px; }
+        .nav-links a { text-decoration: none; color: var(--dark); font-weight: 400; transition: 0.3s; }
+        .nav-links a:hover { color: var(--accent); }
+        </style>
+</head>
+<body>
+    <nav>
+        <a href="#" class="logo">PEH <span>TECHNOLOGY</span></a>
+        <ul class="nav-links">
+            <li><a href="index.html">หน้าแรก</a></li>
+            <li><a href="about.html">เกี่ยวกับเรา</a></li>
+            <li><a href="products.html">ผลิตภัณฑ์</a></li>
+            <li><a href="services.html">บริการ</a></li>
+            <li><a href="gallery.html">ผลงาน</a></li>
+            <li><a href="contact.html">ติดต่อเรา</a></li>
+        </ul>
+        <img 
+        src="1/2.jpg" 
+        alt="PEH Logo" 
+        style="width:50px; height:50px; object-fit:contain;"
+        />
+    </nav>
+
+    <!-- SECTION SERVICES -->
+<section style="padding:60px 5%; background:#ffffff;">
+
+    <h2 style="
+        text-align:center;
+        font-size:42px;
+        color:#003b95;
+        margin-bottom:50px;
+    ">
+        บริการของเรา
+    </h2>
+
+    <div style="
+        display:grid;
+        grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+        gap:25px;
+    ">
+
+        <!-- SERVICE 1 -->
+        <div style="
+            background:#f4f7fb;
+            padding:30px;
+            border-radius:20px;
+            box-shadow:0 5px 15px rgba(0,0,0,0.1);
+            transition:0.3s;
+        ">
+
+            <h3 style="color:#003b95; font-size:28px; margin-bottom:15px;">
+                งานกันซึม
+            </h3>
+
+            <p style="line-height:1.8;">
+                ให้บริการแก้ปัญหารั่วซึม ดาดฟ้า หลังคา ห้องน้ำ
+                และผนังอาคาร ด้วยวัสดุคุณภาพสูง
+                พร้อมทีมช่างมืออาชีพ
+            </p>
+
+        </div>
+
+        <!-- SERVICE 2 -->
+        <div style="
+            background:#f4f7fb;
+            padding:30px;
+            border-radius:20px;
+            box-shadow:0 5px 15px rgba(0,0,0,0.1);
+        ">
+
+            <h3 style="color:#003b95; font-size:28px; margin-bottom:15px;">
+                อุดรอยรั่ว PU Injection
+            </h3>
+
+            <p style="line-height:1.8;">
+                บริการอัดฉีด PU สำหรับรอยแตกร้าว
+                รอยรั่วซึมคอนกรีต ใต้ดิน บ่อพัก
+                และโครงสร้างอาคาร
+            </p>
+
+        </div>
+
+        <!-- SERVICE 3 -->
+        <div style="
+            background:#f4f7fb;
+            padding:30px;
+            border-radius:20px;
+            box-shadow:0 5px 15px rgba(0,0,0,0.1);
+        ">
+
+            <h3 style="color:#003b95; font-size:28px; margin-bottom:15px;">
+                ทาสีและเคลือบผิว
+            </h3>
+
+            <p style="line-height:1.8;">
+                บริการทาสีภายใน ภายนอก
+                สีสะท้อนความร้อน และเคลือบป้องกันพื้นผิว
+                เพื่อเพิ่มความสวยงามและอายุการใช้งาน
+            </p>
+
+        </div>
+
+        <!-- SERVICE 4 -->
+        <div style="
+            background:#f4f7fb;
+            padding:30px;
+            border-radius:20px;
+            box-shadow:0 5px 15px rgba(0,0,0,0.1);
+        ">
+
+            <h3 style="color:#003b95; font-size:28px; margin-bottom:15px;">
+                รีโนเวทอาคาร
+            </h3>
+
+            <p style="line-height:1.8;">
+                รับปรับปรุงบ้าน อาคาร โรงงาน
+                และสำนักงาน พร้อมงานซ่อมแซมครบวงจร
+                โดยทีมงานมืออาชีพ
+            </p>
+
+        </div>
+
+        <!-- SERVICE 5 -->
+        <div style="
+            background:#f4f7fb;
+            padding:30px;
+            border-radius:20px;
+            box-shadow:0 5px 15px rgba(0,0,0,0.1);
+        ">
+
+            <h3 style="color:#003b95; font-size:28px; margin-bottom:15px;">
+                จำหน่ายวัสดุก่อสร้าง
+            </h3>
+
+            <p style="line-height:1.8;">
+                จำหน่ายสีรองพื้น วัสดุกันซึม
+                ฟิล์มพื้น และวัสดุคุณภาพสูง
+                สำหรับงานก่อสร้างและตกแต่ง
+            </p>
+
+        </div>
+
+        <!-- SERVICE 6 -->
+        <div style="
+            background:#f4f7fb;
+            padding:30px;
+            border-radius:20px;
+            box-shadow:0 5px 15px rgba(0,0,0,0.1);
+        ">
+
+            <h3 style="color:#003b95; font-size:28px; margin-bottom:15px;">
+                ให้คำปรึกษาหน้างาน
+            </h3>
+
+            <p style="line-height:1.8;">
+                สำรวจพื้นที่จริง วิเคราะห์ปัญหา
+                และแนะนำวิธีแก้ไขที่เหมาะสม
+                พร้อมออกแบบระบบงานให้ครบ
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+</body>
+</html>

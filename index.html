@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PEH TECHNOLOGY - นวัตกรรมเคลือบหลังคาเย็นและดาดฟ้ามาตรฐานสากล</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #003366; 
+            --accent: #00A8E8; 
+            --dark: #1a1a1a;
+            --light: #f4f7f6;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Kanit', sans-serif; }
+        html { scroll-behavior: smooth; }
+        body { background-color: #fff; color: var(--dark); line-height: 1.6; }
+
+        /* Navigation */
+        nav {
+            background: white;
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .logo { font-size: 1.8rem; font-weight: 700; color: var(--primary); letter-spacing: 1px; text-decoration: none; }
+        .logo span { color: var(--accent); }
+
+        .nav-links { display: flex; list-style: none; gap: 25px; }
+        .nav-links a { text-decoration: none; color: var(--dark); font-weight: 400; transition: 0.3s; }
+        .nav-links a:hover { color: var(--accent); }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,51,102,0.75), rgba(0,51,102,0.75)), 
+                        url('1.jpg'); 
+            background-size: cover;
+            background-position: center;
+            height: 85vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            padding: 0 20px;
+        }
+        .hero h1 { font-size: 3.8rem; margin-bottom: 20px; text-shadow: 2px 2px 10px rgba(0,0,0,0.5); }
+        .hero p { font-size: 1.5rem; max-width: 900px; margin-bottom: 35px; font-weight: 300; }
+
+        /* Sections */
+        .section-padding { padding: 80px 10%; }
+        .text-center { text-align: center; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-top: 50px; }
+        
+        .card {
+            background: var(--light);
+            padding: 40px 30px;
+            border-radius: 20px;
+            text-align: center;
+            transition: 0.4s;
+            border: 1px solid #eee;
+        }
+        .card:hover { transform: translateY(-10px); background: white; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+        .card i { font-size: 3rem; color: var(--primary); margin-bottom: 20px; }
+
+        /* Gallery */
+        .gallery-img { width: 100%; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); margin-top: 30px; }
+
+        /* Buttons */
+        .btn {
+            padding: 15px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            transition: 0.3s;
+        }
+        .btn-primary { background: var(--accent); color: white; }
+        .btn:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+
+        footer { background: #0a192f; color: white; padding: 40px 10%; text-align: center; }
+
+        @media (max-width: 992px) {
+            .nav-links { display: none; } /* ซ่อนเมนูบนมือถือเพื่อความเรียบง่าย */
+            .hero h1 { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#" class="logo">PEH <span>TECHNOLOGY</span></a>
+        <ul class="nav-links">
+            <li><a href="index.html">หน้าแรก</a></li>
+            <li><a href="about.html">เกี่ยวกับเรา</a></li>
+            <li><a href="products.html">ผลิตภัณฑ์</a></li>
+            <li><a href="services.html">บริการ</a></li>
+            <li><a href="gallery.html">ผลงาน</a></li>
+            <li><a href="contact.html">ติดต่อเรา</a></li>
+        </ul>
+        <img 
+        src="1/2.jpg" 
+        alt="PEH Logo" 
+        style="width:50px; height:50px; object-fit:contain;"
+        />
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <h1>PEH TECHNOLOGY</h1>
+            <p>ผู้นำด้านเทคโนโลยีเคลือบพื้นผิวสะท้อนความร้อนระดับสูง โดยทีมงานมืออาชีพจากจีน</p>
+            <a href="#contact" class="btn btn-primary">ขอรับการประเมินราคา</a>
+        </div>
+    </header>
+
+    <section id="about" class="section-padding text-center">
+        <h2 style="color: var(--primary);">เกี่ยวกับเรา</h2>
+        <p style="max-width: 800px; margin: 20px auto;">PEH TECHNOLOGY คือผู้เชี่ยวชาญด้านนวัตกรรมจัดการความร้อนในอาคาร เรานำเข้าเทคโนโลยีเคมีภัณฑ์และทีมวิศวกรจากประเทศจีนเพื่อส่งมอบโซลูชันที่มีประสิทธิภาพสูงสุด</p>
+    </section>
+
+    <section id="products" class="section-padding" style="background: var(--light);">
+        <h2 class="text-center" style="color: var(--primary);">ผลิตภัณฑ์ของเรา</h2>
+        <div class="grid">
+            <div class="card">
+                <i class="fas fa-fill-drip"></i>
+                <h3>Cool Coating Layer</h3>
+                <p>สีเซรามิกสะท้อนความร้อนคุณภาพสูง ทนต่อรังสี UV และการกัดกร่อน</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Waterproof Shield</h3>
+                <p>ผลิตภัณฑ์กันซึมเกรดอุตสาหกรรม ปกป้องดาดฟ้าจากการรั่วซึมได้ 100%</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="section-padding">
+        <h2 class="text-center" style="color: var(--primary);">บริการของเรา</h2>
+        <div class="grid">
+            <div class="card">
+                <i class="fas fa-tools"></i>
+                <h3>พ่นเคลือบหลังคา</h3>
+                <p>บริการพ่นสีสะท้อนความร้อนสำหรับโรงงานและคลังสินค้าขนาดใหญ่</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-building"></i>
+                <h3>ปรับปรุงดาดฟ้า</h3>
+                <p>แก้ไขปัญหาสะสมความร้อนบนดาดฟ้าอาคารสำนักงานและคอนโด</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="section-padding text-center" style="background: var(--light);">
+        <h2 style="color: var(--primary);">ผลงานที่ผ่านมา</h2>
+        <div class="container">
+            <img src="1/1.png " alt="ผลงาน PEH TECHNOLOGY" class="gallery-img">
+        </div>
+    </section>
+
+    <section id="contact" class="section-padding text-center">
+        <h2 style="color: var(--primary); margin-bottom: 20px;">ติดต่อเรา</h2>
+        <p style="margin-bottom: 30px;">พร้อมวิเคราะห์ปัญหาหน้างานโดยทีมงานมืออาชีพ</p>
+        <div class="contact-btns">
+            <a href="tel:0880775556" class="btn btn-primary" style="background: var(--primary);">โทร 0969804128</a>
+            <a href="https://line.me/R/ti/p/@905byiyy" class="btn btn-primary" style="background: #06c755;">Line Official</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-logo">PEH <span>TECHNOLOGY</span></div>
+        <p>&copy; 2026 PEH TECHNOLOGY. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
